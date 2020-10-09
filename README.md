@@ -1,5 +1,7 @@
 # peduli-sehat-web-app
 
+see the video demo here : https://youtu.be/DCCVT26H7Y8
+
 ## Project setup
 1. First thing first you need to prepare node js stable version 
 2. Go to the root directory
