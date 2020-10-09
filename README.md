@@ -2,6 +2,8 @@
 
 see the video demo here : https://youtu.be/DCCVT26H7Y8
 
+ALL ON THIS WEB APP IS DYNAMIC, except the location
+
 ## Project setup
 1. First thing first you need to prepare node js stable version 
 2. Go to the root directory
