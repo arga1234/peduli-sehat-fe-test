@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="pd-l-r-20 mb-15">
+      <MainPage />
+    </div>
+    <div class="pd-l-r-20 mb-15">
+      <Week />
+    </div>
+    <div class="pd-l-r-20  mb-15">
+    <PrayerTime />
+    </div>
+    <BottomMenu />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import MainPage from '../components/MainPage'
+import BottomMenu from '../components/BottomMenu'
+import PrayerTime from '../components/PrayerTime'
+import Week from '../components/Week'
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  components : {
+    BottomMenu : BottomMenu, 
+    PrayerTime: PrayerTime,
+    Week: Week,
+    MainPage: MainPage,
   }
 }
 </script>

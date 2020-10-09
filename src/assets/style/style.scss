@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$bgcolorwhite : white;
+$bgcolorgrey : rgb(235, 235, 235);
+$bgmenu : rgb(197, 197, 197);
+$blue: #7E7EDA;
+$blueHexToRgba :rgba(126, 126, 218, 0.14);
+$blue2HexToRgba: rgba(126, 126, 218, 0.2);
+
+*{
+  margin : 0; 
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.commonTextFormat{
+    font-size: 11px;
+    color: $blue;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $bgcolorgrey;
+}
+
+.boxShadowv1{
+    -webkit-box-shadow: 3px 0px 38px -27px rgba(126,126,218,1);
+    -moz-box-shadow: 3px 0px 38px -27px rgba(126,126,218,1);
+    box-shadow: 3px 0px 38px -27px rgba(126,126,218,1);
+}
+
+.Width420{
+    min-width: 420px;
+    max-width: 420px;
+}
+
+.home{
+    @extend .Width420;
+    background-color: $bgcolorwhite;
+    min-height: 100vh;
+    position: relative;
+}
+
+.bottomMenu{
+    @extend .Width420;
+    position: fixed;
+    bottom: 0px;
+    background-color: $bgcolorwhite;
+    min-height: 10vh;
+    display: flex;
+}
+
+.activeItem{
+    opacity: 1!important;
+    font-weight: bold;
+}
+
+.prayerTime{
+    display: flex;
+    flex-direction: column ;
+    position: relative;
+    margin-bottom: 80px;
+
+    .item {
+        cursor: pointer;
+        padding:20px 30px;
+        width:100%;
+        margin: 5px 0px;
+        border-radius: 13.5px;
+        background-color: $blueHexToRgba;
+        color:$blue;
+        font-size: 14px;
+        transition:0.3s;
+        .leftItem{
+            float: left;
+            opacity: 0.5;
+        }
+
+        .rightItem{
+            float: right;
+            opacity: 0.5;
+        }
+    }
+
+    .item:hover{
+        background-color: $blue2HexToRgba;
+    }
+}
+
+.bottomMenu {
+    label {
+        @extend .commonTextFormat;
+        width: 25%;
+        text-align: center;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    label:hover{
+        background-color: $bgcolorgrey;
+    }
+
+    label {
+        img {
+            display: block;
+            margin: auto;
+            margin-bottom:10px;
+            margin-top: 10px;
+        }
+    }
+} 
+
+.week {
+    @extend .boxShadowv1;
+    display: flex;
+    flex-direction: row;
+    min-height: 15vh;
+    margin-top: 10px;
+    position: relative;
+    padding: 20px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    .activeSpan{
+        span{
+            @extend .activeItem
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        span {
+            margin-bottom: 10px;
+            opacity: 0.5;
+            @extend .commonTextFormat
+        }
+
+        span:last-child{
+            font-size: 5px!important;
+            margin-bottom: 0px;
+        }
+
+        
+    }
+}
+
+.mosque{
+    width:130px;
+    position:absolute;
+    right:0;
+    bottom:0;
+    margin-bottom:2px;
+    margin-right:45px
+}
+.mekah{
+    cursor: pointer;
+    width:30px;
+    position:absolute;
+    right:0;
+    top:0;
+    margin-top:10px;
+    margin-right:10px
+}
+
+.question{
+    cursor: pointer;
+    width:40px;
+    position:absolute;
+    right:0;
+    bottom:0;
+    margin-bottom:10px;
+    margin-right:10px
+}
+
+.mainPageBasic{
+    margin-top: 15px;
+    position: relative;
+    display: block;
+}
+.mainPage {
+    @extend .mainPageBasic;
+}
+
+.topMainPage {
+    @extend .mainPageBasic;
+    padding : 20px 0px;
+}
+
+.botMainPage {
+    @extend .mainPageBasic;
+    margin-bottom: 50px;
+}
+
+.leftMainPage {
+    color: $blue;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+}
+
+.rightMainPage {
+    color: $blue;
+    font-size: 14px;
+    float: right;
+}
+
+.clock{
+    margin-left: 20px;
+    margin-top: 20px;
+    position: absolute;
+    .clockTime{
+        color: $blue;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nextPrayer{
+        @extend .commonTextFormat;
+        margin-top:5px;
+    }
+}
+
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.pd-l-r-20{
+    padding: 0px 20px
+}
+
+
+.pd-l-r-10{
+    padding: 0px 10px
+}
+
+.pd-t-b-10{
+    padding: 10px 0px
+}
