@@ -47,7 +47,9 @@ export default {
                 var second = nextPray.rightItem.second
                 var nextPrayTime = `${nextPray.leftItem.label}, ${hour < 10 ? '0'+hour:hour}:${minute < 10 ? '0'+minute:minute}`
                 var nextPrayTimeToCompare = `${hour < 10 ? '0'+hour:hour}:${minute < 10 ? '0'+minute:minute}:${second<10?'0'+second:second}`
+                console.log(nextPray)
                 if(val == nextPrayTimeToCompare){
+                    this.messageToSend.notification.title = `sudah masuk waktu ${nextPray.leftItem.label}`
                     this.messageToSend.registration_ids.push(this.token)
                     this.notifUserToPray(this.messageToSend)
                 }

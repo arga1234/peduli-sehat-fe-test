@@ -1,6 +1,6 @@
 var message = {
     "notification": {
-        "title": "Sudah masuk waktu Shalat",
+        "title": "",
         "body": "Solat dulu yuk",
         "click_action": "http://localhost:8080"
       },
